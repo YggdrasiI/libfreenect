@@ -24,8 +24,7 @@
  * either License.
  */
 
-#ifndef USB_LIBUSB10
-#define USB_LIBUSB10
+#pragma once
 
 #include "libfreenect.h"
 #include <libusb.h>
@@ -99,9 +98,5 @@ int fnusb_start_iso(fnusb_dev *dev, fnusb_isoc_stream *strm, fnusb_iso_cb cb, in
 int fnusb_stop_iso(fnusb_dev *dev, fnusb_isoc_stream *strm);
 
 int fnusb_control(fnusb_dev *dev, uint8_t bmRequestType, uint8_t bRequest, uint16_t wValue, uint16_t wIndex, uint8_t *data, uint16_t wLength);
-#ifdef BUILD_AUDIO
 int fnusb_bulk(fnusb_dev *dev, uint8_t endpoint, uint8_t *data, int len, int *transferred);
 int fnusb_num_interfaces(fnusb_dev *dev);
-#endif
-
-#endif

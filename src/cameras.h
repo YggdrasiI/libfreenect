@@ -24,8 +24,7 @@
  * either License.
  */
 
-#ifndef CAMERAS_H
-#define CAMERAS_H
+#pragma once
 
 #include "libfreenect.h"
 
