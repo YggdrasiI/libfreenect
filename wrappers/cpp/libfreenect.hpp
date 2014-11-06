@@ -160,7 +160,8 @@ namespace Freenect {
 		/* Enable clipping in libfreenect driver
 		 * The range values are irrelvant, if enable=false. */
 		int setClipping(bool enable, int16_t top, int16_t bottom, int16_t left, int16_t right){
-			const freenect_clip clip = {enable?1:0,top,bottom,left,right};
+			char on = enable?1:0;
+			const freenect_clip clip = {on,top,bottom,left,right};
 			return freenect_set_clipping(m_dev, clip );
 		};
 #endif
