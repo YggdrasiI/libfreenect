@@ -53,5 +53,3 @@ static inline void memcpy_intersection(uint8_t *dst, uint8_t *src, int S, int E,
 	}
 };
 
-#endif
-
